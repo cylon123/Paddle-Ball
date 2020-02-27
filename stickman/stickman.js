@@ -42,6 +42,19 @@
                 ctx2.rect(xSlide,canvas.height-20,200,20);
                 ctx2.fillStyle = 'yellow';
                 ctx2.fill();
+                ctx2.beginPath();
+                let i = 60,j = 60,skeetWidth = 100,skeetHeight = 20,count = 0,offset = 10,k = 1;
+                while(j < canvas.height / 2){
+                    while(i < canvas.width - skeetWidth * k){
+                        ctx2.rect(i,j,skeetWidth,skeetHeight);
+                        i += skeetWidth + offset;
+                    }
+                    j += skeetHeight + offset; 
+                    i = 60 + (skeetWidth + offset) * k;
+                    ++k;
+                }
+                ctx2.fillStyle = 'brown';
+                ctx2.fill();
                 x += dx;
                 y += dy;
                 if(y < ballRadius || (x < xSlide + 200 && x > xSlide && y > canvas.height - ballRadius - 20 && y < canvas.height)){
