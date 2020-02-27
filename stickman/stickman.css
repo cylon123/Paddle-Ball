@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Tomorrow', sans-serif;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: green;
+    z-index: 1;
+}
+.scoreboard{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.255);
+    padding: 1rem;
+    z-index: 5;
+    height: 10%;
+    width: 10%;
+}
+.modal{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.255);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 7;
+}
+.gameBegin{
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    height: 50%;
+    width: 50%;
+    background: yellow;
+    text-align: center;
+}
+.closed{
+    display: none;
+}
+.display{
+    display: none;
+}
