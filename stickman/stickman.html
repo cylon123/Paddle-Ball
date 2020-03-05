@@ -8,18 +8,39 @@
     <link rel="stylesheet" href="./stickman.css">
 </head>
 <body>
-    <div class="main-div">
-        <div class="modal">
-            <div class="gameBegin">
-                <h1>Stickman Welcomes you!!</h1>
-                <button class="playButton" onclick="onPlayClicked()">PLAY</button>
-            </div>
+    <canvas id="canvas"></canvas>
+    <canvas id="ball"></canvas>
+    <canvas id = "paddle"></canvas>
+    <canvas id="skeets"></canvas>
+    <div class="statsPanel">
+        <div id="scoreKeeper">
+            <p>Score</p>
+            <p id="score"></p>
         </div>
-        <div class="scoreboard">
-        <p></p>
+        <div id="lifeKeeper">
+            <p>Lives</p>
+            <p id="lives"></p>
         </div>
-        <canvas></canvas>
+        <div class="maxScoreKeeper">
+            <p>Max Score</p>
+            <p id = "maxScore"></p>
+        </div>
+    </div>
+    <div class="continueModal display">
+        <div class="options">
+            <p>Do you want to continue?</p>
+            <button class="yesButton">YES</button>
+            <button class="noButton">NO</button>
+        </div>
+        <div class="newGame display">
+            <p>Stickman Welcomes You!!</p>
+            <button class="startGame">Start Game</button>
+            <p id="instructions">Press Esc for Pause</p>
+        </div>
     </div>
 </body>
-<script src="./stickman.js"></script>
+    <script src="./canvas.js"></script>
+    <script src="paddle.js"></script>
+    <script src="skeets.js"></script>
+    <script src="ball.js"></script>
 </html>
